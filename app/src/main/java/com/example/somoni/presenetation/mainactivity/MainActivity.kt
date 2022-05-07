@@ -1,4 +1,4 @@
-package com.example.somoni.presenetation
+package com.example.somoni.presenetation.mainactivity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
