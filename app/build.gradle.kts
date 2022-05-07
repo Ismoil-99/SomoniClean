@@ -5,6 +5,7 @@ plugins {
     id ("kotlin-android-extensions")
     id ("androidx.navigation.safeargs.kotlin")
     id("dagger.hilt.android.plugin")
+    kotlin("android.extensions")
 }
 
 android {
@@ -33,6 +34,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -40,6 +44,7 @@ dependencies {
     implementation (Dependencies.UI.appCompat)
     implementation (Dependencies.UI.material)
     implementation (Dependencies.UI.constraintlayout)
+    implementation("androidx.paging:paging-common-ktx:3.1.1")
     testImplementation (Dependencies.Tests.testImplementation)
     androidTestImplementation(Dependencies.Tests.androidTestImplementation_junit)
     androidTestImplementation (Dependencies.Tests.androidTestImplementation_espresso)
@@ -59,6 +64,7 @@ dependencies {
     implementation(Dependencies.Lifecycle.lifecycle_viewmodel)
     implementation(Dependencies.Lifecycle.lifecycle_livedata)
     implementation(Dependencies.Lifecycle.kapt)
+    implementation(Dependencies.Lifecycle.lifecycle_runtime)
 
     //coroutines
     implementation(Dependencies.Coroutines.coroutines)
@@ -66,6 +72,9 @@ dependencies {
     //hilt
     implementation(Dependencies.Hilt.hilt)
     kapt(Dependencies.Hilt.kapt)
+
+    implementation(Dependencies.OtherDepend.guava)
+
 }
 kapt{
     correctErrorTypes = true
