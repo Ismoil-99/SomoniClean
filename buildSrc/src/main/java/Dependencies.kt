@@ -47,6 +47,8 @@ object Dependencies{
         //ViewModel
         const val lifecycle_viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
 
+        const val lifecycle_runtime  = "androidx.lifecycle:lifecycle-runtime-ktx:2.5.0-beta01"
+
         //LievData
         const val lifecycle_livedata = "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
 
@@ -69,6 +71,6 @@ object Dependencies{
     }
 
     object OtherDepend{
-
+        const val guava = "com.google.guava:guava:27.0.1-android"
     }
 }
