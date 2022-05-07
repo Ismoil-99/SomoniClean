@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Somoni">
         <activity
-            android:name=".presenetation.MainActivity"
+            android:name=".presenetation.mainactivity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
