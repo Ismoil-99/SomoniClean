@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_settings"
+    app:startDestination="@id/infoAppFragment">
+
+    <fragment
+        android:id="@+id/infoAppFragment"
+        android:name="com.example.somoni.presenetation.uisetting.infoapp.InfoFragment"
+        android:label="InfoAppFragment"
+        tools:layout="@layout/fragment_info"
+        >
+        <action
+            android:id="@+id/action_infoAppFragment_to_chooseCurrencyFragment"
+            app:destination="@id/chooseCurrencyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseCurrencyFragment"
+        android:name="com.example.somoni.presenetation.uisetting.choosecurrency.ChooseCurrencyFragment"
+        android:label="ChooseCurrencyFragment"
+        tools:layout="@layout/fragment_choosecurrency"
+        >
+        <action
+            android:id="@+id/action_chooseCurrencyFragment_to_displayModeFragment"
+            app:destination="@id/displayModeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/displayModeFragment"
+        android:name="com.example.somoni.presenetation.uisetting.coursedisplaymode.DisplayModeFragment"
+        android:label="DisplayModeFragment"
+        tools:layout="@layout/fragment_displaymode"
+        />
+</navigation>

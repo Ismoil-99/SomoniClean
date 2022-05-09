@@ -4,6 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/activity_main.xml" value="0.37037037037037035" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/choosecurrency_fragment_layout.xml" value="0.4171875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/displaymode_fragment_layout.xml" value="0.4171875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/example_fragment.xml" value="0.209375" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/example_fragment_layout.xml" value="0.209375" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/flow_main_fragment.xml" value="0.1962962962962963" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/flow_settings_fragment.xml" value="0.16585365853658537" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/info_fragment_layout.xml" value="0.22" />
       </map>
     </option>
   </component>
