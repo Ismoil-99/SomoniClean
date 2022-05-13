@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Somoni</string>
+
+    <string name="finish">Готово</string>
     <string name="name_splash_icon">Сомони</string>
     <string name="tochoosecuurency">Дальше</string>
     <string name="content">Сомони - будет показывать вам самый выгодный курс дня. Также самый выгодный курс по переводам из России в Таджикистан</string>

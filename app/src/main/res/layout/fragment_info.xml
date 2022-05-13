@@ -26,10 +26,13 @@
         android:text="@string/content"
         android:textColor="@color/black"
         android:textSize="18sp" />
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/tochoosecurrency"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="27dp"
         android:layout_marginEnd="27dp"
@@ -39,8 +42,6 @@
         android:paddingTop="13dp"
         android:paddingEnd="110dp"
         android:paddingBottom="13dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
         android:text="@string/tochoosecuurency"
         android:textSize="14sp"
         app:backgroundTint="@color/button"

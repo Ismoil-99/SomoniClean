@@ -30,5 +30,13 @@
         android:name="com.example.somoni.presenetation.uisetting.coursedisplaymode.DisplayModeFragment"
         android:label="DisplayModeFragment"
         tools:layout="@layout/fragment_displaymode"
-        />
+        >
+        <action
+            android:id="@+id/action_settings_to_nav_main"
+            app:destination="@id/nav_main"
+            app:popUpTo="@id/nav_settings"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+    <include app:graph="@navigation/nav_main" />
 </navigation>

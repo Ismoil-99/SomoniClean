@@ -150,6 +150,6 @@ class ChooseCurrencyFragment(
     //save currency option
     private fun saveCurrencyType(currency: Currency) {
         SomoniApp.sharedPreferencesEditor.putInt(CURRENCY_TYPE, currency.currencyId)
-        SomoniApp.sharedPreferencesEditor.commit()
+        SomoniApp.sharedPreferencesEditor.apply()
     }
 }
