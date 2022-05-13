@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="33dp"
+        android:src="@drawable/nbt_card" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/font_display"
+        android:text="@string/content"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/tochoosecurrency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/font_display"
+        android:paddingStart="110dp"
+        android:paddingTop="13dp"
+        android:paddingEnd="110dp"
+        android:paddingBottom="13dp"
+        android:text="@string/tochoosecuurency"
+        android:textSize="14sp"
+        app:backgroundTint="@color/button"
+        app:cornerRadius="8dp" />
+</RelativeLayout>

@@ -1,3 +1,82 @@
 <resources>
     <string name="app_name">Somoni</string>
+
+    <string name="finish">Готово</string>
+    <string name="name_splash_icon">Сомони</string>
+    <string name="tochoosecuurency">Дальше</string>
+    <string name="content">Сомони - будет показывать вам самый выгодный курс дня. Также самый выгодный курс по переводам из России в Таджикистан</string>
+    <string name="name_bank">Международный банк Таджикистана</string>
+    <string name="kurs">Самый выгодный курс по переводам</string>
+    <string name="name_valuta">Валюта</string>
+    <string name="name_rub">1 RUB</string>
+    <string name="equal">=</string>
+    <string name="name_usd">1 USD</string>
+    <string name="name_euro">1 EUR</string>
+    <string name="name_one">1</string>
+    <string name="name_rub_lg">RUB</string>
+    <string name="name_result">0.1350</string>
+    <string name="name_result_dop">0.1380</string>
+    <string name="name_sell">Покупка</string>
+    <string name="name_sale">Продажа</string>
+    <string name="name_pur">0.1550</string>
+    <string name="name_bank_info">Хумо</string>
+    <string name="name_sale_num">0.0000</string>
+    <string name="link">Конвертировать по этому курсу</string>
+    <string name="select">Выберите валюту</string>
+    <string name="euro_currency">EUR (Европейское Евро)</string>
+    <string name="usd_currency">USD (Доллар США)</string>
+    <string name="rus_currency">RUB (Росиский Рубль)</string>
+    <string name="kurs_valute">Выберите режим отображения курса</string>
+    <string name="step">шаг</string>
+    <string name="name_kurs_advantage">Выгодный курс</string>
+    <string name="name_kurs_nbt">Курс по НБТ</string>
+    <string name="humo">Хумо</string>
+    <string name="downloads">Загрузка</string>
+
+    <string name="convertation">Конвертация по этому курсу</string>
+    <string name="shareCurrency">Поделиться</string>
+    <string name="convertation_bottom">Конвертация</string>
+    <string name="step_num">1</string>
+    <string name="step_num_2">2</string>
+    <string name="from">из</string>
+    <string name="step_numer">3</string>
+    <string name="usd_currency_value">USD</string>
+    <string name="support_text">Вы сможете поменять это позднее, на странице настроек</string>
+    <string name="lg_russian">RUB</string>
+    <string name="lg_usa">USD</string>
+    <string name="lg_euro">EUR</string>
+    <string name="lg_info_rus">Российский Рубль</string>
+    <string name="lg_info_usa">Доллар США</string>
+    <string name="lg_info_euro">Евро</string>
+    <string name="name_rezh">Простой режим</string>
+    <string name="name_rezh_all">Расширенный режим</string>
+    <string name="name_tjk_lg">TJS</string>
+    <string name="name_valuts">Валюта</string>
+    <string name="sale_currency">Продажа</string>
+    <string name="buy_currency">Покупка</string>
+    <style name="error_internet">подключение к Интернету отсутствует</style>
+    <string name="title_activity_menu">MenuActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="previous">Previous</string>
+    <string name="pusto"></string>
+    <!-- setting -->
+    <string name="setting_see">Опция показа курсов валют</string>
+    <string name="option">Настройки</string>
+    <string name="setting_extended">Простой</string>
+    <string name="default_currency">Валюта по умолчанию</string>
+    <string name="name_currency">Евро</string>
+    <string name="notification">Уведомления</string>
+    <string name="telegram">Написать в Telegram</string>
+    <string name="usual">Обычный</string>
+    <string name="alif">Алиф</string>
+    <string name="transfer_rf">Переводы из РФ</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="kusr_one">Выгодный курс</string>
+    <string name="kurs_nbt">Курс по НБТ</string>
+    <string name="kurs_nbt_info">Курсы НБТ</string>
+    <string name="convertation_currency">Конвертировать по курсу от НБТ</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

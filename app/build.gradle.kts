@@ -2,7 +2,6 @@ plugins {
     id ("com.android.application")
     id ("org.jetbrains.kotlin.android")
     id ("kotlin-kapt")
-    id ("kotlin-android-extensions")
     id ("androidx.navigation.safeargs.kotlin")
     id("dagger.hilt.android.plugin")
     kotlin("android.extensions")
@@ -44,10 +43,13 @@ dependencies {
     implementation (Dependencies.UI.appCompat)
     implementation (Dependencies.UI.material)
     implementation (Dependencies.UI.constraintlayout)
-    implementation("androidx.paging:paging-common-ktx:3.1.1")
+    implementation(Dependencies.Paging.paging)
     testImplementation (Dependencies.Tests.testImplementation)
     androidTestImplementation(Dependencies.Tests.androidTestImplementation_junit)
     androidTestImplementation (Dependencies.Tests.androidTestImplementation_espresso)
+
+    implementation(Dependencies.Fragment.fragment)
+    implementation(Dependencies.OtherDepend.delegate_viewbinding)
 
 
     //navigation

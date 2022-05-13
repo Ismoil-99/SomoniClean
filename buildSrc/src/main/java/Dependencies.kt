@@ -5,7 +5,7 @@ object Dependencies{
     }
 
     object UI{
-        const val appCompat_version = "1.4.1"
+        const val appCompat_version = "1.2.0"
         const val material_version = "1.5.0"
         const val constraintlayout_version = "2.1.3"
 
@@ -27,7 +27,7 @@ object Dependencies{
 
 
     object NavigationComponent{
-        const val nav_version = "2.4.2"
+        const val nav_version = "2.4.0"
 
         const val navigation_fragment = "androidx.navigation:navigation-fragment-ktx:$nav_version"
         const val navigation_ui = "androidx.navigation:navigation-ui-ktx:$nav_version"
@@ -71,6 +71,17 @@ object Dependencies{
     }
 
     object OtherDepend{
+        const val delegate_viewbinding_version = "1.5.6"
         const val guava = "com.google.guava:guava:27.0.1-android"
+
+        const val delegate_viewbinding = "com.github.kirich1409:viewbindingpropertydelegate-noreflection:$delegate_viewbinding_version"
+    }
+    object Paging{
+        const val paging_version = "3.1.1"
+        const val paging = "androidx.paging:paging-common-ktx:$paging_version"
+    }
+    object Fragment{
+        const val fragment_version = "1.4.1"
+        const val fragment = "androidx.fragment:fragment-ktx:$fragment_version"
     }
 }

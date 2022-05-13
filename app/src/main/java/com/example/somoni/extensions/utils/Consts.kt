@@ -1,4 +1,4 @@
-package com.example.somoni.extensions.const
+package com.example.somoni.extensions.utils
 
 const val APP_SETTINGS = "app_settings"
 const val CURRENCY_TYPE = "currency_type"
