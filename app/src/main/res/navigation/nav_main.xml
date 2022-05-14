@@ -6,8 +6,8 @@
     app:startDestination="@id/exampleFragment">
     <fragment
         android:id="@+id/exampleFragment"
-        android:name="com.example.somoni.presenetation.uimain.ExampleFragment"
+        android:name="com.example.somoni.presenetation.uimain.MainFragment"
         android:label="ExampleFragment"
-        tools:layout="@layout/fragment_example"
+        tools:layout="@layout/fragment_main"
         />
 </navigation>

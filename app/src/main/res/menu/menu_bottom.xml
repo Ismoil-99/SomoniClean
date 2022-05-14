@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/advancedFragment"
+        android:title="@string/name_kurs_advantage"
+        android:icon="@drawable/advante" />
+    <item
+        android:id="@+id/nbtFragment"
+        android:title="@string/name_kurs_nbt"
+        android:icon="@drawable/ntbcurrency" />
+</menu>

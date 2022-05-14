@@ -1,31 +1,36 @@
 package com.example.somoni.presenetation.uisetting.coursedisplaymode
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.core.view.isInvisible
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.MutableLiveData
 import androidx.navigation.fragment.findNavController
-import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.somoni.R
 import com.example.somoni.databinding.FragmentDisplaymodeBinding
 import com.example.somoni.extensions.SomoniApp
-import com.example.somoni.extensions.base.BaseFragment
 import com.example.somoni.extensions.navigation.navigateSafely
 import com.example.somoni.extensions.utils.CHANGE_MODE
 import com.example.somoni.extensions.utils.SAVE
 import com.example.somoni.extensions.utils.SELECT_OPTION
 import com.example.somoni.extensions.utils.ViewType
-import com.example.somoni.presenetation.uisetting.ExampleViewModel
 import com.google.android.material.card.MaterialCardView
 
 class DisplayModeFragment(
-) : BaseFragment<ExampleViewModel,FragmentDisplaymodeBinding>(R.layout.fragment_displaymode) {
-    override val binding by viewBinding(FragmentDisplaymodeBinding::bind)
-    override val viewModel : ExampleViewModel by viewModels()
+) : Fragment(R.layout.fragment_displaymode) {
+    lateinit var binding: FragmentDisplaymodeBinding
     private val currencyLiveData = MutableLiveData<ViewType?>(null)
 
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = FragmentDisplaymodeBinding.inflate(inflater,container,false)
+        return binding.root
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

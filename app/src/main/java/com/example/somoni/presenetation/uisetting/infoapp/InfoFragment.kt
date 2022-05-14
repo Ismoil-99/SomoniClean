@@ -2,7 +2,10 @@ package com.example.somoni.presenetation.uisetting.infoapp
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
@@ -13,9 +16,18 @@ import com.example.somoni.extensions.navigation.navigateSafely
 import com.example.somoni.presenetation.uisetting.ExampleViewModel
 
 
-class InfoFragment : BaseFragment<ExampleViewModel,FragmentInfoBinding>(R.layout.fragment_info){
-    override val viewModel : ExampleViewModel by viewModels()
-    override val binding by viewBinding(FragmentInfoBinding::bind)
+class InfoFragment : Fragment(R.layout.fragment_info){
+    lateinit var binding: FragmentInfoBinding
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+
+        binding = FragmentInfoBinding.inflate(inflater,container,false)
+        return binding.root
+    }
 
     @SuppressLint("ResourceAsColor")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
