@@ -7,7 +7,6 @@ import com.example.somoni.R
 import com.example.somoni.databinding.FragmentNbtBinding
 import com.example.somoni.extensions.base.BaseFragment
 import com.example.somoni.extensions.ui.hideActionBar
-import com.example.somoni.extensions.ui.hideBottom
 import com.example.somoni.presenetation.uimain.partNbt.Nbtviewmodel.NbtViewModel
 
 class NbtFragment: BaseFragment<NbtViewModel,FragmentNbtBinding>(R.layout.fragment_nbt) {

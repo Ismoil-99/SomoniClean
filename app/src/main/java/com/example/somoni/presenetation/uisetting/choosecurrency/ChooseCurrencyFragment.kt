@@ -26,6 +26,7 @@ import com.example.somoni.extensions.navigation.overrideOnBackPressed
 import com.example.somoni.extensions.ui.hideActionBar
 import com.example.somoni.presenetation.uisetting.ExampleViewModel
 import com.google.android.material.card.MaterialCardView
+import kotlinx.android.synthetic.main.activity_main.*
 
 class ChooseCurrencyFragment: Fragment(R.layout.fragment_choosecurrency) {
     lateinit var binding: FragmentChoosecurrencyBinding
@@ -40,6 +41,11 @@ class ChooseCurrencyFragment: Fragment(R.layout.fragment_choosecurrency) {
     ): View? {
         binding = FragmentChoosecurrencyBinding.inflate(inflater,container,false)
         return binding.root
+    }
+
+    override fun onResume() {
+        super.onResume()
+        requireActivity()?.toolbar.menu?.findItem(R.id.action_favorite)?.isVisible = false
     }
 
     @SuppressLint("ResourceAsColor")

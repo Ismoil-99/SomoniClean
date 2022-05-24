@@ -18,6 +18,7 @@ import com.example.somoni.extensions.utils.SAVE
 import com.example.somoni.extensions.utils.SELECT_OPTION
 import com.example.somoni.extensions.utils.ViewType
 import com.google.android.material.card.MaterialCardView
+import kotlinx.android.synthetic.main.activity_main.*
 
 class DisplayModeFragment: Fragment(R.layout.fragment_displaymode) {
     lateinit var binding: FragmentDisplaymodeBinding
@@ -116,5 +117,11 @@ class DisplayModeFragment: Fragment(R.layout.fragment_displaymode) {
     private fun saveMode(viewType: ViewType) {
         SomoniApp.sharedPreferencesEditor.putInt(SELECT_OPTION, viewType.viewTypeId)
         SomoniApp.sharedPreferencesEditor.apply()
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        requireActivity()?.toolbar.menu?.findItem(R.id.action_favorite)?.isVisible = false
     }
 }

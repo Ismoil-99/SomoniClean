@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() {
         setupNavigation()
     }
     private fun setupNavigation() {
-        val sharedPreferences = SomoniApp.sharedPreferences
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.fragment_container_view) as NavHostFragment
         navController = navHostFragment.navController
@@ -48,12 +47,14 @@ class MainActivity : AppCompatActivity() {
         menuInflater.inflate(R.menu.menu_layout,menu)
         return super.onCreateOptionsMenu(menu)
     }
+    private fun toChangeOption(){
+        navController.navigate(R.id.action_mainFragment_to_nav_change)
+        binding.toolbar.menu?.findItem(R.id.action_favorite)?.isVisible = false
+    }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
         when(item.itemId){
-            R.id.action_favorite -> {
-                navController.navigate(R.id.action_mainFragment_to_nav_change) }
+            R.id.action_favorite -> {toChangeOption()}
         }
         return super.onOptionsItemSelected(item)
     }
