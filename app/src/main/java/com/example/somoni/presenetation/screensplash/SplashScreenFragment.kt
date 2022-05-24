@@ -16,7 +16,6 @@ import com.example.somoni.extensions.utils.SELECT_OPTION
 
 class SplashScreenFragment :Fragment(R.layout.fragment_screen_layout){
     lateinit var binding:FragmentScreenLayoutBinding
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -26,18 +25,15 @@ class SplashScreenFragment :Fragment(R.layout.fragment_screen_layout){
         hideActionBar()
         return binding.root
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val sharedPreferences = SomoniApp.sharedPreferences
         view.postDelayed({
-            if (sharedPreferences.contains(CURRENCY_TYPE) && sharedPreferences.contains(
-                    SELECT_OPTION)){
-                findNavController().navigateSafely(R.id.splash_ScreenFragment_to_nav_main)
-            }else{
-                findNavController().navigateSafely(R.id.splash_screenFragment_to_nav_settings)
-            }
-        },2000)
+             if(sharedPreferences.contains(CURRENCY_TYPE)&& sharedPreferences.contains(SELECT_OPTION)){
+                 findNavController().navigateSafely(R.id.action_splashScreenFragment_to_mainFragment)
+             }else{
+                 findNavController().navigateSafely(R.id.action_splashScreenFragment_to_nav_settings)
+             }
+        },3000)
     }
-
 }

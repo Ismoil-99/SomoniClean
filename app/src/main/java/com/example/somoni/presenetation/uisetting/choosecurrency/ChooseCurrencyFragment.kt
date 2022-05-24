@@ -2,9 +2,12 @@ package com.example.somoni.presenetation.uisetting.choosecurrency
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.core.view.isInvisible
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.MutableLiveData
 import androidx.navigation.fragment.findNavController
@@ -13,19 +16,32 @@ import com.example.somoni.R
 import com.example.somoni.databinding.FragmentChoosecurrencyBinding
 import com.example.somoni.extensions.SomoniApp
 import com.example.somoni.extensions.base.BaseFragment
+import com.example.somoni.extensions.navigation.activityNavController
 import com.example.somoni.extensions.utils.CHANGE_MODE
 import com.example.somoni.extensions.utils.CURRENCY_TYPE
 import com.example.somoni.extensions.utils.Currency
 import com.example.somoni.extensions.utils.SAVE
 import com.example.somoni.extensions.navigation.navigateSafely
+import com.example.somoni.extensions.navigation.overrideOnBackPressed
+import com.example.somoni.extensions.ui.hideActionBar
 import com.example.somoni.presenetation.uisetting.ExampleViewModel
 import com.google.android.material.card.MaterialCardView
 
-class ChooseCurrencyFragment(
-) : BaseFragment<ExampleViewModel,FragmentChoosecurrencyBinding>(R.layout.fragment_choosecurrency) {
+class ChooseCurrencyFragment: Fragment(R.layout.fragment_choosecurrency) {
+    lateinit var binding: FragmentChoosecurrencyBinding
     private val currencyLiveData = MutableLiveData<Currency>()
-    override val binding by viewBinding(FragmentChoosecurrencyBinding::bind)
-    override val viewModel : ExampleViewModel by viewModels()
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        overrideOnBackPressed { activityNavController().navigateUp() }
+    }
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = FragmentChoosecurrencyBinding.inflate(inflater,container,false)
+        return binding.root
+    }
+
     @SuppressLint("ResourceAsColor")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
