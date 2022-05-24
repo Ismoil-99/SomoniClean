@@ -16,7 +16,6 @@ import com.example.somoni.presenetation.uisetting.ExampleViewModel
 class MainFragment : BaseFragment<ExampleViewModel,FragmentMainBinding>(R.layout.fragment_main){
     override val viewModel : ExampleViewModel by viewModels()
     override val binding by viewBinding(FragmentMainBinding::bind)
-
     @SuppressLint("ResourceAsColor")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

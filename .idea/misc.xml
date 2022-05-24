@@ -4,24 +4,36 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/drawable-v24/ic_check_green.xml" value="0.223" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/activity_main.xml" value="0.37037037037037035" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/drawable/ic__telegram.xml" value="0.1415" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/drawable/ic_arrows.xml" value="0.1415" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/drawable/ic_option.xml" value="0.1415" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/choosecurrency_fragment_layout.xml" value="0.4171875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/displaymode_fragment_layout.xml" value="0.4171875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/example_fragment.xml" value="0.209375" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/example_fragment_layout.xml" value="0.209375" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/flow_change_fragment.xml" value="0.1718683197947841" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/flow_main_fragment.xml" value="0.1962962962962963" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/flow_settings_fragment.xml" value="0.16585365853658537" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/fragment_advanced.xml" value="0.1569046601111586" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/fragment_advanced.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/fragment_change.xml" value="0.2" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/fragment_choosecurrency.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/fragment_displaymode.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/fragment_example.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/fragment_flow_change.xml" value="0.14493373236425822" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/fragment_flow_settings.xml" value="0.15775972637879435" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/fragment_flow_splash.xml" value="0.14493373236425822" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/fragment_info.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/fragment_layout.xml" value="0.15775972637879435" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/fragment_main.xml" value="0.16" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/fragment_nbt.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/fragment_main.xml" value="0.18" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/fragment_nbt.xml" value="0.2" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/fragment_screen_layout.xml" value="0.4171875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/fragment_tochange.xml" value="0.15775972637879435" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/fragment_transfer.xml" value="0.15775972637879435" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/fragment_usually.xml" value="0.15775972637879435" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/info_fragment_layout.xml" value="0.22" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/menu/menu_bottom.xml" value="0.1569046601111586" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/menu/menu_layout.xml" value="0.15775972637879435" />
       </map>
     </option>
   </component>

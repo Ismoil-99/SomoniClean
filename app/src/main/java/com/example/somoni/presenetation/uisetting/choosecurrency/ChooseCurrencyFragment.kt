@@ -16,17 +16,24 @@ import com.example.somoni.R
 import com.example.somoni.databinding.FragmentChoosecurrencyBinding
 import com.example.somoni.extensions.SomoniApp
 import com.example.somoni.extensions.base.BaseFragment
+import com.example.somoni.extensions.navigation.activityNavController
 import com.example.somoni.extensions.utils.CHANGE_MODE
 import com.example.somoni.extensions.utils.CURRENCY_TYPE
 import com.example.somoni.extensions.utils.Currency
 import com.example.somoni.extensions.utils.SAVE
 import com.example.somoni.extensions.navigation.navigateSafely
+import com.example.somoni.extensions.navigation.overrideOnBackPressed
+import com.example.somoni.extensions.ui.hideActionBar
 import com.example.somoni.presenetation.uisetting.ExampleViewModel
 import com.google.android.material.card.MaterialCardView
 
 class ChooseCurrencyFragment: Fragment(R.layout.fragment_choosecurrency) {
     lateinit var binding: FragmentChoosecurrencyBinding
     private val currencyLiveData = MutableLiveData<Currency>()
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        overrideOnBackPressed { activityNavController().navigateUp() }
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

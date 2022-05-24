@@ -10,7 +10,7 @@
         android:name="com.example.somoni.presenetation.uimain.partAdvance.AdvancedFragment"
         android:label="AdvancedFragment"
         tools:layout="@layout/fragment_advanced"
-        />
+    />
     <fragment
         android:id="@+id/nbtFragment"
         android:name="com.example.somoni.presenetation.uimain.partNbt.nbtfragment.NbtFragment"

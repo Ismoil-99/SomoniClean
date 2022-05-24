@@ -13,12 +13,17 @@ import com.example.somoni.R
 import com.example.somoni.databinding.FragmentInfoBinding
 import com.example.somoni.extensions.base.BaseFragment
 import com.example.somoni.extensions.navigation.navigateSafely
+import com.example.somoni.extensions.ui.hideActionBar
 import com.example.somoni.presenetation.uisetting.ExampleViewModel
 
 
 class InfoFragment : Fragment(R.layout.fragment_info){
     lateinit var binding: FragmentInfoBinding
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+    }
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

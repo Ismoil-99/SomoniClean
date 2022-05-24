@@ -8,22 +8,20 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.isInvisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.MutableLiveData
-import androidx.navigation.fragment.findNavController
+import androidx.navigation.NavOptions
 import com.example.somoni.R
 import com.example.somoni.databinding.FragmentDisplaymodeBinding
 import com.example.somoni.extensions.SomoniApp
-import com.example.somoni.extensions.navigation.navigateSafely
+import com.example.somoni.extensions.navigation.findTopNavNavController
 import com.example.somoni.extensions.utils.CHANGE_MODE
 import com.example.somoni.extensions.utils.SAVE
 import com.example.somoni.extensions.utils.SELECT_OPTION
 import com.example.somoni.extensions.utils.ViewType
 import com.google.android.material.card.MaterialCardView
 
-class DisplayModeFragment(
-) : Fragment(R.layout.fragment_displaymode) {
+class DisplayModeFragment: Fragment(R.layout.fragment_displaymode) {
     lateinit var binding: FragmentDisplaymodeBinding
     private val currencyLiveData = MutableLiveData<ViewType?>(null)
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -34,7 +32,6 @@ class DisplayModeFragment(
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         currencyLiveData.observe(viewLifecycleOwner) {
             binding.optionSave.isEnabled = it != null
         }
@@ -82,7 +79,7 @@ class DisplayModeFragment(
         }
         binding.optionSave.setOnClickListener {
             saveMode(currencyLiveData.value!!)
-            findNavController().navigateSafely(R.id.action_settings_to_nav_main)
+            findTopNavNavController().navigate(R.id.mainFragment,null,NavOptions.Builder().setPopUpTo(R.id.nav_settings,true).build())
         }
     }
     private fun modeSelect(
