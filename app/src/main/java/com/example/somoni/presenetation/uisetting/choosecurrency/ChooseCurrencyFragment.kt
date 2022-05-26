@@ -130,6 +130,14 @@ class ChooseCurrencyFragment: Fragment(R.layout.fragment_choosecurrency) {
                 findNavController().navigateSafely(R.id.action_chooseCurrencyFragment_to_displayModeFragment)
             }
         }
+        binding.selectCurrency.setOnClickListener {
+            saveCurrencyType(currencyLiveData.value!!)
+            if (get == true) {
+                findNavController().navigateUp()
+            } else {
+                findNavController().navigateSafely(R.id.action_chooseCurrencyFragment_to_displayModeFragment)
+            }
+        }
     }
     //disabled card
     private fun checkCurrencyTypeCard(
@@ -172,6 +180,6 @@ class ChooseCurrencyFragment: Fragment(R.layout.fragment_choosecurrency) {
     //save currency option
     private fun saveCurrencyType(currency: Currency) {
         SomoniApp.sharedPreferencesEditor.putInt(CURRENCY_TYPE, currency.currencyId)
-        SomoniApp.sharedPreferencesEditor.apply()
+        SomoniApp.sharedPreferencesEditor.commit()
     }
 }

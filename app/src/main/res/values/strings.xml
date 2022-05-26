@@ -54,7 +54,6 @@
     <string name="name_valuts">Валюта</string>
     <string name="sale_currency">Продажа</string>
     <string name="buy_currency">Покупка</string>
-    <style name="error_internet">подключение к Интернету отсутствует</style>
     <string name="title_activity_menu">MenuActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -79,4 +78,5 @@
     <string name="kurs_nbt_info">Курсы НБТ</string>
     <string name="convertation_currency">Конвертировать по курсу от НБТ</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="errors">подключение к Интернету отсутствует</string>
 </resources>

@@ -4,7 +4,9 @@ import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
 import com.example.somoni.extensions.utils.APP_SETTINGS
+import dagger.hilt.android.HiltAndroidApp
 
+@HiltAndroidApp
 class SomoniApp : Application() {
 
     override fun onCreate() {

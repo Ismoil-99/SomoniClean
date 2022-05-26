@@ -77,6 +77,9 @@ dependencies {
 
     implementation(Dependencies.OtherDepend.guava)
 
+    implementation(Dependencies.OtherDepend.picasso)
+    implementation(Dependencies.OtherDepend.coil)
+
 }
 kapt{
     correctErrorTypes = true

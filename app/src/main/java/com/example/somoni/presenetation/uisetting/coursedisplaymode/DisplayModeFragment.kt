@@ -121,7 +121,6 @@ class DisplayModeFragment: Fragment(R.layout.fragment_displaymode) {
 
     override fun onResume() {
         super.onResume()
-
         requireActivity()?.toolbar.menu?.findItem(R.id.action_favorite)?.isVisible = false
     }
 }

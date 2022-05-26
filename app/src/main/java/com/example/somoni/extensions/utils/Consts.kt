@@ -1,5 +1,8 @@
 package com.example.somoni.extensions.utils
 
+import com.example.somoni.data.model.Regular
+import com.example.somoni.data.model.TransferNbt
+
 const val APP_SETTINGS = "app_settings"
 const val CURRENCY_TYPE = "currency_type"
 const val SELECT_OPTION = "select_option"
@@ -22,12 +25,19 @@ const val CURRENCY_SEND_FOR_DIALOG = "currency_send_for_dialog"
 const val BASE_URL = "https://transfer.humo.tj/currency-app/v1/"
 const val SAVE = "Сохранить"
 
-
+enum class State {
+    ERROR,
+    SUCCESS,
+    LOADING
+}
 enum class Currency(val currencyId: Int) {
     RUB(0),
     USD(1),
     EUR(2)
 }
+
+class Resourse<D>(val data: List<Regular>?, val state: State,)
+class ResourseNbt<D>(val dataNbts: List<TransferNbt>?, val state: State,)
 enum class ViewType(val viewTypeId: Int) {
     SIMPLE(0),
     ADVANCE(1)
