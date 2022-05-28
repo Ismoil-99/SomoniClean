@@ -11,6 +11,7 @@ import com.example.somoni.R
 import com.example.somoni.databinding.FragmentMainBinding
 import com.example.somoni.extensions.base.BaseFragment
 import com.example.somoni.presenetation.uisetting.ExampleViewModel
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainFragment : BaseFragment<ExampleViewModel,FragmentMainBinding>(R.layout.fragment_main){
@@ -22,5 +23,9 @@ class MainFragment : BaseFragment<ExampleViewModel,FragmentMainBinding>(R.layout
         val bottomNavigationView = binding.bottomNavigationView
         val navController = (childFragmentManager.findFragmentById(R.id.nav_host_menu) as NavHostFragment).navController
         NavigationUI.setupWithNavController(bottomNavigationView,navController)
+    }
+    override fun onResume() {
+        super.onResume()
+        requireActivity()?.toolbar.menu?.findItem(R.id.action_favorite)?.isVisible = true
     }
 }

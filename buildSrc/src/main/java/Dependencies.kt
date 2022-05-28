@@ -56,6 +56,12 @@ object Dependencies{
     object OtherDepend{
         const val delegate_viewbinding_version = "1.5.6"
         const val guava = "com.google.guava:guava:27.0.1-android"
+        const val picasso_version = "2.71828"
+        const val coil_version = "1.1.1"
+
+        const val coil = "io.coil-kt:coil:$coil_version"
+
+        const val picasso = "com.squareup.picasso:picasso:$picasso_version"
 
         const val delegate_viewbinding = "com.github.kirich1409:viewbindingpropertydelegate-noreflection:$delegate_viewbinding_version"
     }

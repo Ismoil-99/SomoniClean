@@ -15,6 +15,7 @@ import com.example.somoni.extensions.base.BaseFragment
 import com.example.somoni.extensions.navigation.navigateSafely
 import com.example.somoni.extensions.ui.hideActionBar
 import com.example.somoni.presenetation.uisetting.ExampleViewModel
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class InfoFragment : Fragment(R.layout.fragment_info){
@@ -41,4 +42,10 @@ class InfoFragment : Fragment(R.layout.fragment_info){
             findNavController().navigateSafely(R.id.action_infoAppFragment_to_chooseCurrencyFragment)
         }
     }
+
+    override fun onResume() {
+        super.onResume()
+        requireActivity()?.toolbar.menu?.findItem(R.id.action_favorite)?.isVisible = false
+    }
+
 }
