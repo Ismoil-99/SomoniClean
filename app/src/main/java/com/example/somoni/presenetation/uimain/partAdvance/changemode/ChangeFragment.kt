@@ -4,18 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.isInvisible
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.example.somoni.R
 import com.example.somoni.databinding.FragmentChangeBinding
-import com.example.somoni.extensions.navigation.activityNavController
 import com.example.somoni.extensions.navigation.navigateSafely
-import com.example.somoni.extensions.navigation.overrideOnBackPressed
-import com.example.somoni.extensions.ui.hideBottom
 import com.example.somoni.extensions.ui.showActionBar
 
 class ChangeFragment:Fragment() {
