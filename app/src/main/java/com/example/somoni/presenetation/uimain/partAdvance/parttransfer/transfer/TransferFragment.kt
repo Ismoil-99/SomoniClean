@@ -18,7 +18,9 @@ import com.example.somoni.extensions.SomoniApp
 import com.example.somoni.extensions.base.BaseFragment
 import com.example.somoni.extensions.utils.*
 import com.example.somoni.presenetation.uimain.partAdvance.parttransfer.adaptertransfer.AdapterTransfer
+import com.example.somoni.presenetation.uimain.partAdvance.parttransfer.bottomsheetstransfer.BottomSheetsTransfer
 import com.example.somoni.presenetation.uimain.partAdvance.parttransfer.transferviewmodel.TransferViewModel
+import com.example.somoni.presenetation.uimain.partAdvance.partusually.bottomsheetsusually.BottomSheetsUsually
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -43,12 +45,12 @@ class TransferFragment : BaseFragment<TransferViewModel,FragmentTransferBinding>
                 bundle.putString(NAME_CURRENCY_VALUE,currency.bank_name)
                 bundle.putString(NAME_ICON,currency.icon)
                 bundle.putInt(NAME_POSITION,currencyId)
-//                val bottomSheet = SheetsBottomNbtFragment()
-//                bottomSheet.arguments = bundle
-//                bottomSheet.show(
-//                    requireActivity().supportFragmentManager,
-//                    bottomSheet.tag
-//                )
+                val bottomSheet = BottomSheetsTransfer()
+                bottomSheet.arguments = bundle
+                bottomSheet.show(
+                    requireActivity().supportFragmentManager,
+                    bottomSheet.tag
+                )
             }
             adapter = gettransferRus
         }

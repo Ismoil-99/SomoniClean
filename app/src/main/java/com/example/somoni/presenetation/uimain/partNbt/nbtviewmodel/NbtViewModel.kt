@@ -1,4 +1,4 @@
-package com.example.somoni.presenetation.uimain.partNbt.Nbtviewmodel
+package com.example.somoni.presenetation.uimain.partNbt.nbtviewmodel
 
 import com.example.somoni.data.model.TransferNbt
 import com.example.somoni.data.repo.Repository

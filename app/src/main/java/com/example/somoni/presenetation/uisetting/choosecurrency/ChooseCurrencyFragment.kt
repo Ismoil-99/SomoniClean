@@ -31,6 +31,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 class ChooseCurrencyFragment: Fragment(R.layout.fragment_choosecurrency) {
     lateinit var binding: FragmentChoosecurrencyBinding
     private val currencyLiveData = MutableLiveData<Currency>()
+    var changeCurrency:Boolean? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         overrideOnBackPressed { activityNavController().navigateUp() }
@@ -46,6 +48,12 @@ class ChooseCurrencyFragment: Fragment(R.layout.fragment_choosecurrency) {
     override fun onResume() {
         super.onResume()
         requireActivity()?.toolbar.menu?.findItem(R.id.action_favorite)?.isVisible = false
+        changeCurrency = SomoniApp.sharedPreferences.getBoolean("CHANGECURRENCY",false)
+        if (changeCurrency as Boolean){
+            binding.selectCurrency.text = SAVE
+            binding.bottomText.isInvisible = true
+            binding.linearLayout.isInvisible = true
+        }
     }
 
     @SuppressLint("ResourceAsColor")
@@ -53,12 +61,6 @@ class ChooseCurrencyFragment: Fragment(R.layout.fragment_choosecurrency) {
         super.onViewCreated(view, savedInstanceState)
         currencyLiveData.observe(viewLifecycleOwner) {
             binding.selectCurrency.isEnabled = it != null
-        }
-        val get = arguments?.getBoolean(CHANGE_MODE, false)
-        if (get == true) {
-            binding.selectCurrency.text = SAVE
-            binding.bottomText.isInvisible = true
-            binding.linearLayout.isInvisible = true
         }
         if (SomoniApp.sharedPreferences.contains(CURRENCY_TYPE)) {
             when (SomoniApp.sharedPreferences.getInt(CURRENCY_TYPE, Currency.RUB.currencyId)) {
@@ -124,19 +126,11 @@ class ChooseCurrencyFragment: Fragment(R.layout.fragment_choosecurrency) {
         //Select card
         binding.selectCurrency.setOnClickListener {
             saveCurrencyType(currencyLiveData.value!!)
-            if (get == true) {
-                findNavController().navigateUp()
-            } else {
+            if (changeCurrency == true)
+                findNavController().popBackStack()
+             else
                 findNavController().navigateSafely(R.id.action_chooseCurrencyFragment_to_displayModeFragment)
-            }
-        }
-        binding.selectCurrency.setOnClickListener {
-            saveCurrencyType(currencyLiveData.value!!)
-            if (get == true) {
-                findNavController().navigateUp()
-            } else {
-                findNavController().navigateSafely(R.id.action_chooseCurrencyFragment_to_displayModeFragment)
-            }
+
         }
     }
     //disabled card
