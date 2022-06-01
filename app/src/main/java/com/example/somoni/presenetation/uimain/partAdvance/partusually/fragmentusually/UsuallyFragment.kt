@@ -17,6 +17,7 @@ import com.example.somoni.databinding.FragmentUsuallyBinding
 import com.example.somoni.extensions.SomoniApp
 import com.example.somoni.extensions.base.BaseFragment
 import com.example.somoni.extensions.utils.*
+import com.example.somoni.presenetation.uimain.partAdvance.partusually.bottomsheetsusually.BottomSheetsUsually
 import com.example.somoni.presenetation.uimain.partAdvance.partusually.usuallyadapter.UsuallyAdapter
 import com.example.somoni.presenetation.uimain.partAdvance.partusually.viewmodelusually.UsuallyViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -41,12 +42,12 @@ class UsuallyFragment : BaseFragment<UsuallyViewModel,FragmentUsuallyBinding>(R.
                 bundle.putSerializable(CurrencyINFO, currency.Currency)
                 bundle.putString(NAME_ICON, currency.icon)
                 bundle.putString(NAME_CURRENCY_VALUE, currency.bank_name)
-//                val bottomSheet = SheetsBottomFragment()
-//                bottomSheet.arguments = bundle
-//                bottomSheet.show(
-//                    requireActivity().supportFragmentManager,
-//                    bottomSheet.tag
-//                )
+                val bottomSheet = BottomSheetsUsually()
+                bottomSheet.arguments = bundle
+                bottomSheet.show(
+                    requireActivity().supportFragmentManager,
+                    bottomSheet.tag
+                )
             }
             adapter = getCurrency
         }
