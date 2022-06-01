@@ -7,11 +7,22 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/drawable-v24/rounded_card_nbt.xml" value="0.2155" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/drawable/ic__telegram.xml" value="0.1415" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/drawable/ic_arrows.xml" value="0.1415" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/drawable/ic_change_currency.xml" value="0.165" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/drawable/ic_close.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/drawable/ic_close_convertation.xml" value="0.165" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/drawable/ic_down.xml" value="0.165" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/drawable/ic_graphics.xml" value="0.165" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/drawable/ic_option.xml" value="0.1415" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/drawable/ic_share.xml" value="0.165" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/drawable/ic_three.xml" value="0.256" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/drawable/loadingprogress.xml" value="0.256" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/drawable/rounded_bottom_sheet.xml" value="0.165" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/drawable/rounded_card_humo.xml" value="0.361" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/bottom_change_currency.xml" value="0.15775972637879435" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/bottom_sheets_transfer.xml" value="0.15775972637879435" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/bottom_sheets_transfernbt.xml" value="0.15775972637879435" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/bottom_sheets_usually.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/choosecurrency_fragment_layout.xml" value="0.4171875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/displaymode_fragment_layout.xml" value="0.4171875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Somoni/app/src/main/res/layout/example_fragment.xml" value="0.209375" />

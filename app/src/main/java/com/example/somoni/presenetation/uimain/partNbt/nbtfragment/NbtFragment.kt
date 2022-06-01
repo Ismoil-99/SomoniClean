@@ -2,7 +2,6 @@ package com.example.somoni.presenetation.uimain.partNbt.nbtfragment
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
@@ -18,8 +17,9 @@ import com.example.somoni.extensions.utils.CURRENCY_EUR
 import com.example.somoni.extensions.utils.CURRENCY_RUS
 import com.example.somoni.extensions.utils.CURRENCY_USD
 import com.example.somoni.extensions.utils.State
-import com.example.somoni.presenetation.uimain.partNbt.Nbtviewmodel.NbtViewModel
+import com.example.somoni.presenetation.uimain.partNbt.nbtviewmodel.NbtViewModel
 import com.example.somoni.presenetation.uimain.partNbt.adapternbt.AdapterNbtCurrency
+import com.example.somoni.presenetation.uimain.partNbt.bottomsheet.BottomSheetsNBTTransfer
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
@@ -44,9 +44,10 @@ class NbtFragment: BaseFragment<NbtViewModel,FragmentNbtBinding>(R.layout.fragme
             adapter = getNbtCurrency
         }
         showValue()
-    }
 
+    }
     private fun showValue() {
+        val bundle = Bundle()
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED){
                 viewModel.transferNbt.collectLatest {
@@ -60,17 +61,17 @@ class NbtFragment: BaseFragment<NbtViewModel,FragmentNbtBinding>(R.layout.fragme
                             binding.loading.visibility = View.GONE
                             binding.error.visibility = View.GONE
                             getNbtCurrency.getCurrencyNbt(it.dataNbts!!)
-//                            bundle?.putSerializable(CURRENCY_USD,it.dataNbts[0])
-//                            bundle?.putSerializable(CURRENCY_EUR,it.dataNbts[1])
-//                            bundle?.putSerializable(CURRENCY_RUS,it.dataNbts[4])
-//                            binding.convertationCurrency.setOnClickListener {
-//                                val bottomSheet = BottomConvertationFragment()
-//                                bottomSheet?.arguments = bundle
-//                                bottomSheet.show(
-//                                    requireActivity().supportFragmentManager,
-//                                    bottomSheet.tag
-//                                )
-//                            }
+                            bundle?.putSerializable(CURRENCY_USD,it.dataNbts[0])
+                            bundle?.putSerializable(CURRENCY_EUR,it.dataNbts[1])
+                            bundle?.putSerializable(CURRENCY_RUS,it.dataNbts[4])
+                            binding.convertationCurrency.setOnClickListener {
+                                val bottomSheet = BottomSheetsNBTTransfer()
+                                bottomSheet?.arguments = bundle
+                                bottomSheet.show(
+                                    requireActivity().supportFragmentManager,
+                                    bottomSheet.tag
+                                )
+                            }
                         }
                         State.LOADING -> {
                             binding.nbtCurrency.visibility = View.GONE

@@ -9,6 +9,7 @@ import androidx.core.view.isInvisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.MutableLiveData
 import androidx.navigation.NavOptions
+import androidx.navigation.fragment.findNavController
 import com.example.somoni.R
 import com.example.somoni.databinding.FragmentDisplaymodeBinding
 import com.example.somoni.extensions.SomoniApp
@@ -30,17 +31,11 @@ class DisplayModeFragment: Fragment(R.layout.fragment_displaymode) {
         binding = FragmentDisplaymodeBinding.inflate(inflater,container,false)
         return binding.root
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val changeModeCurrency = SomoniApp.sharedPreferences.getBoolean("CHANGEMODCURRENCY",false)
         currencyLiveData.observe(viewLifecycleOwner) {
             binding.optionSave.isEnabled = it != null
-        }
-        val get = arguments?.getBoolean(CHANGE_MODE)
-        if (get == true){
-            binding.optionSave.text = SAVE
-            binding.bottomText.isInvisible = true
-            binding.linearLayout.isInvisible = true
         }
         if (SomoniApp.sharedPreferences.contains(SELECT_OPTION)) {
             when (SomoniApp.sharedPreferences.getInt(SELECT_OPTION, ViewType.SIMPLE.viewTypeId)) {
@@ -80,7 +75,15 @@ class DisplayModeFragment: Fragment(R.layout.fragment_displaymode) {
         }
         binding.optionSave.setOnClickListener {
             saveMode(currencyLiveData.value!!)
-            findTopNavNavController().navigate(R.id.mainFragment,null,NavOptions.Builder().setPopUpTo(R.id.nav_settings,true).build())
+            if(changeModeCurrency)
+                findNavController().popBackStack()
+            else
+                findTopNavNavController().navigate(R.id.mainFragment,null,NavOptions.Builder().setPopUpTo(R.id.nav_settings,true).build())
+        }
+        if (changeModeCurrency){
+            binding.optionSave.text = SAVE
+            binding.bottomText.isInvisible = true
+            binding.linearLayout.isInvisible = true
         }
     }
     private fun modeSelect(
